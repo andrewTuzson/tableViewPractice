@@ -39,6 +39,15 @@ class GrindListCell: UITableViewCell {
         }
     }
     
+    @IBAction func updateDetailsButton(_ sender: Any) {
+        if grindDetail.text == "   Achieved   " {
+            grindDetail.text = "   Needs Work   "
+            configureDetail()
+        } else if grindDetail.text == "   Needs Work   " {
+            grindDetail.text = "   Achieved   "
+            configureDetail()
+        }
+    }
 }
 
 extension UIColor {

@@ -63,13 +63,27 @@
                                                     <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQC-hi-X5b">
+                                                    <rect key="frame" x="320" y="24" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="MX8-1C-agB"/>
+                                                        <constraint firstAttribute="width" constant="40" id="uc3-Fe-h7d"/>
+                                                    </constraints>
+                                                    <state key="normal" image="checkmarkNotDone"/>
+                                                    <connections>
+                                                        <action selector="updateDetailsButton:" destination="BIW-7z-0Gm" eventType="touchUpInside" id="3cn-gt-n3a"/>
+                                                        <action selector="updateTableData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3qk-05-qg7"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="T5W-H2-Kxf" firstAttribute="centerY" secondItem="sg5-JP-Ba0" secondAttribute="centerY" id="TUk-ZZ-IVG"/>
                                                 <constraint firstItem="ZoL-cV-vvr" firstAttribute="leading" secondItem="T5W-H2-Kxf" secondAttribute="trailing" constant="12" id="Wqv-Hw-sXn"/>
                                                 <constraint firstItem="T5W-H2-Kxf" firstAttribute="leading" secondItem="sg5-JP-Ba0" secondAttribute="leading" constant="12" id="chv-ll-1pe"/>
                                                 <constraint firstItem="c02-QH-Ugf" firstAttribute="leading" secondItem="T5W-H2-Kxf" secondAttribute="trailing" constant="12" id="da3-RW-WHx"/>
+                                                <constraint firstItem="CQC-hi-X5b" firstAttribute="centerY" secondItem="sg5-JP-Ba0" secondAttribute="centerY" id="ehu-Xs-P65"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="c02-QH-Ugf" secondAttribute="trailing" constant="12" id="ejA-6j-WBx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CQC-hi-X5b" secondAttribute="trailing" id="ifM-wL-E5m"/>
                                                 <constraint firstItem="c02-QH-Ugf" firstAttribute="top" secondItem="sg5-JP-Ba0" secondAttribute="topMargin" constant="6" id="qTK-kq-7Ey"/>
                                                 <constraint firstItem="ZoL-cV-vvr" firstAttribute="top" secondItem="c02-QH-Ugf" secondAttribute="bottom" constant="8" id="zXa-60-Nr0"/>
                                             </constraints>
@@ -183,4 +197,7 @@
             <point key="canvasLocation" x="-235.19999999999999" y="91.754122938530742"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmarkNotDone" width="200" height="200"/>
+    </resources>
 </document>

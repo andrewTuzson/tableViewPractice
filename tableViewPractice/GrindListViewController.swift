@@ -70,6 +70,12 @@ class GrindListViewController: UIViewController {
         return tempGrinds
     }
     
+    @IBAction func updateTableData(_ sender: Any) {
+        grinds.removeAll()
+        grinds = createArray()
+    }
+    
+    
 }
 
 extension GrindListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -90,9 +96,7 @@ extension GrindListViewController: UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: "MasterToDetail", sender: grind)
     }
     
-    
 }
-
 
 
 
