@@ -51,7 +51,7 @@ class GrindListViewController: UIViewController {
         let grind2 = Grind(image: #imageLiteral(resourceName: "fishbrain"), title: "Fishbrain", grindDetail: "   Needs Work   ")
         let grind3 = Grind(image: #imageLiteral(resourceName: "savannah"), title: "Savannah", grindDetail: "   Achieved   ")
         let grind4 = Grind(image: #imageLiteral(resourceName: "topTowqueSoul"), title: "Topside Torque Soul", grindDetail: "   Needs Work   ")
-        let grind5 = Grind(image: #imageLiteral(resourceName: "torque"), title: "Frontside Torque", grindDetail: "   Achieved   ")
+        let grind5 = Grind(image: #imageLiteral(resourceName: "torque"), title: "Frontside Torque", grindDetail: "   Needs Work   ")
         let grind6 = Grind(image: #imageLiteral(resourceName: "xGrind"), title: "X-Grind", grindDetail: "   Achieved   ")
         let grind7 = Grind(image: #imageLiteral(resourceName: "backslide"), title: "Backslide", grindDetail: "   Achieved   ")
         let grind8 = Grind(image: #imageLiteral(resourceName: "bsFarv"), title: "Backside Farv", grindDetail: "   Achieved   ")
@@ -70,11 +70,6 @@ class GrindListViewController: UIViewController {
         return tempGrinds
     }
     
-    @IBAction func toggleCheckmarkButton(_ sender: Any) {
-        
-    }
-    
-    
 }
 
 extension GrindListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -86,6 +81,7 @@ extension GrindListViewController: UITableViewDelegate, UITableViewDataSource {
         let grind = grinds[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "GrindCell") as! GrindListCell
         cell.setGrind(grind: grind)
+        cell.selectionStyle = UITableViewCellSelectionStyle.none;
         return cell
     }
     

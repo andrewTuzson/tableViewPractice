@@ -14,7 +14,6 @@ class GrindListCell: UITableViewCell {
     @IBOutlet weak var grindImageView: UIImageView!
     @IBOutlet weak var grindLabel: UILabel!
     @IBOutlet weak var grindDetail: UILabel!
-    @IBOutlet weak var checkmarkButton: UIButton!
     
     let customGreen = UIColor(rgb: 0x7DCC87)
     let customRed = UIColor(rgb: 0xDC635F)
@@ -23,18 +22,21 @@ class GrindListCell: UITableViewCell {
         grindImageView.image = grind.image
         grindLabel.text = grind.title
         grindDetail.text = grind.grindDetail
-        
+        configureDetail()
+    }
+    
+    func configureDetail() {
         if grindDetail.text == "   Achieved   " {
             grindDetail.backgroundColor = customGreen
+            grindDetail.textColor = UIColor.white
             grindDetail.layer.masksToBounds = true
             grindDetail.layer.cornerRadius = 12
-        } else {
+        } else if grindDetail.text == "   Needs Work   " {
             grindDetail.backgroundColor = customRed
             grindDetail.textColor = UIColor.white
             grindDetail.layer.masksToBounds = true
             grindDetail.layer.cornerRadius = 12
         }
-        
     }
     
 }

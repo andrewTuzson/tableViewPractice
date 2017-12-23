@@ -23,6 +23,7 @@ class DetailViewController: UIViewController {
         setUI()
         if detailGrindDetail.text == "   Achieved   " {
             detailGrindDetail.backgroundColor = customGreen
+            detailGrindDetail.textColor = UIColor.white
             detailGrindDetail.layer.masksToBounds = true
             detailGrindDetail.layer.cornerRadius = 12
         } else {

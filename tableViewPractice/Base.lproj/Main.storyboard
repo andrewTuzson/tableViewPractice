@@ -63,21 +63,8 @@
                                                     <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llN-cq-TsO">
-                                                    <rect key="frame" x="335" y="27" width="35" height="35"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="17r-pg-za6"/>
-                                                        <constraint firstAttribute="height" constant="35" id="BzW-Bs-zx2"/>
-                                                    </constraints>
-                                                    <state key="normal" image="checkmarkNotDone"/>
-                                                    <connections>
-                                                        <action selector="toggleCheckmarkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oMl-k4-Kei"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="llN-cq-TsO" firstAttribute="centerY" secondItem="sg5-JP-Ba0" secondAttribute="centerY" id="1AN-A3-VsS"/>
-                                                <constraint firstItem="llN-cq-TsO" firstAttribute="trailing" secondItem="sg5-JP-Ba0" secondAttribute="trailingMargin" constant="10" id="5EJ-1O-rrq"/>
                                                 <constraint firstItem="T5W-H2-Kxf" firstAttribute="centerY" secondItem="sg5-JP-Ba0" secondAttribute="centerY" id="TUk-ZZ-IVG"/>
                                                 <constraint firstItem="ZoL-cV-vvr" firstAttribute="leading" secondItem="T5W-H2-Kxf" secondAttribute="trailing" constant="12" id="Wqv-Hw-sXn"/>
                                                 <constraint firstItem="T5W-H2-Kxf" firstAttribute="leading" secondItem="sg5-JP-Ba0" secondAttribute="leading" constant="12" id="chv-ll-1pe"/>
@@ -88,7 +75,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="checkmarkButton" destination="llN-cq-TsO" id="9M9-Mz-VwX"/>
                                             <outlet property="grindDetail" destination="ZoL-cV-vvr" id="xPa-At-ywz"/>
                                             <outlet property="grindImageView" destination="T5W-H2-Kxf" id="eDN-hS-jiT"/>
                                             <outlet property="grindLabel" destination="c02-QH-Ugf" id="Zoi-dK-NTG"/>
@@ -127,14 +113,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RYA-A0-1ed">
-                                <rect key="frame" x="67" y="153" width="241" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RYA-A0-1ed">
+                                <rect key="frame" x="0.0" y="64" width="375" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="W7Q-PH-Zxs"/>
+                                    <constraint firstAttribute="height" constant="250" id="W7Q-PH-Zxs"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="cOk-Mm-Vuk">
-                                <rect key="frame" x="67" y="351" width="241" height="25"/>
+                                <rect key="frame" x="67" y="384" width="241" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Ffc-c6-knj"/>
                                 </constraints>
@@ -143,7 +129,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJv-yO-5jX">
-                                <rect key="frame" x="117" y="448" width="141" height="25"/>
+                                <rect key="frame" x="117" y="481" width="141" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="lQw-Px-620"/>
                                 </constraints>
@@ -154,15 +140,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="RYA-A0-1ed" firstAttribute="leading" secondItem="rvr-kN-gJ7" secondAttribute="leading" constant="67" id="3wr-ZS-QrP"/>
+                            <constraint firstItem="RYA-A0-1ed" firstAttribute="leading" secondItem="rvr-kN-gJ7" secondAttribute="leading" id="3wr-ZS-QrP"/>
                             <constraint firstItem="rvr-kN-gJ7" firstAttribute="trailing" secondItem="cOk-Mm-Vuk" secondAttribute="trailing" constant="67" id="5TC-yJ-41K"/>
                             <constraint firstItem="wJv-yO-5jX" firstAttribute="leading" secondItem="rvr-kN-gJ7" secondAttribute="leading" constant="117" id="JU2-Yp-aoE"/>
-                            <constraint firstItem="rvr-kN-gJ7" firstAttribute="trailing" secondItem="RYA-A0-1ed" secondAttribute="trailing" constant="67" id="Kih-ve-uLS"/>
+                            <constraint firstItem="rvr-kN-gJ7" firstAttribute="trailing" secondItem="RYA-A0-1ed" secondAttribute="trailing" id="Kih-ve-uLS"/>
                             <constraint firstItem="cOk-Mm-Vuk" firstAttribute="leading" secondItem="rvr-kN-gJ7" secondAttribute="leading" constant="67" id="dpA-ik-GfG"/>
                             <constraint firstItem="wJv-yO-5jX" firstAttribute="centerX" secondItem="cOk-Mm-Vuk" secondAttribute="centerX" id="eDI-Hg-0ag"/>
                             <constraint firstItem="cOk-Mm-Vuk" firstAttribute="top" secondItem="RYA-A0-1ed" secondAttribute="bottom" constant="70" id="uBI-IU-ZM6"/>
                             <constraint firstItem="cOk-Mm-Vuk" firstAttribute="top" secondItem="RYA-A0-1ed" secondAttribute="bottom" constant="70" id="ujE-BR-8es"/>
-                            <constraint firstItem="RYA-A0-1ed" firstAttribute="top" secondItem="rvr-kN-gJ7" secondAttribute="top" constant="89" id="vUR-q0-fNU"/>
+                            <constraint firstItem="RYA-A0-1ed" firstAttribute="top" secondItem="rvr-kN-gJ7" secondAttribute="top" id="vUR-q0-fNU"/>
                             <constraint firstItem="RYA-A0-1ed" firstAttribute="centerX" secondItem="cOk-Mm-Vuk" secondAttribute="centerX" id="wyT-bV-sPz"/>
                             <constraint firstItem="wJv-yO-5jX" firstAttribute="top" secondItem="cOk-Mm-Vuk" secondAttribute="bottom" constant="72" id="yHq-AF-3bm"/>
                         </constraints>
@@ -197,7 +183,4 @@
             <point key="canvasLocation" x="-235.19999999999999" y="91.754122938530742"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="checkmarkNotDone" width="200" height="200"/>
-    </resources>
 </document>
